@@ -1,0 +1,52 @@
+Stack: LIFO
+
+Example: Undo operation in any text editor. Back Button of the browser .
+And in terminal using the up/down arrow keys we get the previously used commands.
+
+
+Basic algorithm of stack using array
+
+take 1D array 
+
+To track where the last element was inserted 
+Call it – top (index of the last inserted element to the stack)
+
+top = -1 (invalid index )
+When we push and element top will be incremented by one
+so top = 0 (after one PUSH operation)
+another PUSH operation => top = 1
+to avoid array overflow : if top = size – 1 (Then the PUSH is not allowed)
+
+For POP the top value should not be -1
+
+Algorithm: 
+1. PROCEDURE PUSH (v) 
+2. IF TOP = SIZE – 1 THEN 
+3. DISPLAY “STACK OVERFLOW” 
+4. EXIT PUSH 
+5. END IF 
+6. TOP:=TOP+1 // INCREMENT THE TOP OF THE STACK BY 1 
+7. S[TOP]:=v // ASSIGN THE ELEMENT AT THE TOP POSITION OF THE STACK 
+8. END PROCEDURE PUSH
+
+1. PROCEDURE POP () 
+2. IF S.TOP == -1 THEN 
+3. DISPLAY “STACK UNDERFLOW” 
+4. EXIT POP 
+5. END IF 
+6. v:=S[TOP] 
+7. TOP:=TOP – 1 
+8. RETURN v 
+9. END PROCEDURE POP
+
+
+Example: Reverse content of a text file.
+Algorithm: 
+1.	Go on reading characters from the source file until the end-of-file is reached.
+2.	PUSH each character into the stack
+3.	When done, POP characters form the stack. And write them into the destination file until there is STACK OVERFLOW
+Program
+
+
+
+
